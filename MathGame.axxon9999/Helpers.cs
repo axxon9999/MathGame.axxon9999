@@ -120,17 +120,14 @@ namespace MathGame.axxon9999
             if (levelInput == "1")
             {
                 highLevelInput = 10;
-
             }
             else if (levelInput == "2")
             {
                 highLevelInput = 50;
-
             }
             else if (levelInput == "3")
             {
                 highLevelInput = 100;
-
             }
             else
             {
@@ -147,12 +144,14 @@ namespace MathGame.axxon9999
         {
             int howManyQuestions;
             string numberString;
+
             do
             {
                 Console.Write("Choose the amount of questions [5-20] ");
                 numberString = Console.ReadLine() ?? " ";
 
             } while (string.IsNullOrEmpty(numberString) || !Int32.TryParse(numberString, out _));
+            
             howManyQuestions = Convert.ToInt32(numberString);
 
             return howManyQuestions;
